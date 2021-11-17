@@ -88,6 +88,16 @@ class MuLoaderPlugin implements PluginInterface, EventSubscriberInterface
         $this->extras = $composer->getPackage()->getExtra();
         $this->config = $composer->getConfig();
         $this->version = self::VERSION;
+
+	    $packages = $composer->getRepositoryManager()->getLocalRepository()->getPackages();
+	    foreach( $packages as $package ) {
+		    $extras = $package->getExtra();
+		    if ( ! isset( $extras['force-mu'] ) ) {
+			    continue;
+		    }
+		    $this->extras['force-mu'] = isset( $this->extras['force-mu'] ) ? array_merge( $this->extras['force-mu'], $extras['force-mu'] ) : $extras['force-mu'];
+		    $this->extras['force-mu'] = array_unique( $this->extras['force-mu'] );
+	    }
     }
 
     /**
