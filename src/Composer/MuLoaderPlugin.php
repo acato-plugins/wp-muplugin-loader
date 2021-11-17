@@ -322,11 +322,11 @@ class MuLoaderPlugin implements PluginInterface, EventSubscriberInterface
         return <<<DOCBLOCK
 /**
  * Plugin Name: MU Plugin Loader
- * Plugin URI: https://github.com/boxuk/wp-muplugin-loader
+ * Plugin URI: https://github.com/acato-plugins/wp-muplugin-loader
  * Description: MU Plugin Loader - Autoload your mu-plugin directories.
  * Version: {$version}
- * Author: Box UK / Luke Woodward
- * Author URI: https://github.com/boxuk/wp-muplugin-loader
+ * Author: Richard Korthuis / Box UK / Luke Woodward
+ * Author URI: https://github.com/acato-plugins/wp-muplugin-loader
  *
  * @since 1.1.0
  */

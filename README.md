@@ -1,12 +1,9 @@
 # WP Must-Use Plugin Loader
 
-[![Build Status](https://travis-ci.org/boxuk/wp-muplugin-loader.svg?branch=master)](https://travis-ci.org/boxuk/wp-muplugin-loader)
-
 ## Attribution
 
-- This package was forked from
-  [WP Must-Use Plugin Loader](https://github.com/lkwdwrd/wp-muplugin-loader)
-  due to it seemingly falling into abandonment. We are happy to contribute our work back to the source should the maintainer pick up the project again.
+- This package was forked from [WP Must-Use Plugin Loader](https://github.com/boxuk/wp-muplugin-loader) which in turn was forked from
+  [WP Must-Use Plugin Loader](https://github.com/lkwdwrd/wp-muplugin-loader). The fork from the first mentioned package was done to add support of `force-mu` from dependency packages. We are happy to contribute this back to the package, but since our usage is an edge-case we haven't made a pull request.
   
 ## Overview
 
@@ -24,7 +21,7 @@ In your project's `composer.json` file, require this package.
 "require": {
 	"composer/installers": "~1.2.0",
 	"johnpbloch/wordpress": "*",
-	"boxuk/wp-muplugin-loader": "~1.0",
+	"acato-plugins/wp-muplugin-loader": "~1.0",
 }
 ```
 Make sure in the `extras` of your `composer.json` you have your mu-plugins path defined.
@@ -81,7 +78,7 @@ This is compatible with [WPackagist](https://wpackagist.org/). When adding plugi
 ```json
 "require": {
 	"johnpbloch/wordpress": "*",
-	"boxuk/wp-muplugin-loader": "~1.0",
+	"acato-plugins/wp-muplugin-loader": "~1.0",
 	"wpackagist-plugin/rest-api": "*"
 },
 "extra": {
@@ -104,6 +101,10 @@ This is compatible with [WPackagist](https://wpackagist.org/). When adding plugi
 ```
 
 When the `rest-api` plugin is installed, instead of going in the normal plugins folder, it will be pushed over to the mu-plugins folder and loaded automatically with other Must-Use Plugins.
+
+### Forcing MU Plugins from dependency packages
+
+Just like forcing MU plugins from your main `composer.json` you can also force them from the `composer.json` of a dependency. All `force-mu` keys will be merged into one set of MU plugins.
 
 ## Forcing Unix Directory Separators
 
