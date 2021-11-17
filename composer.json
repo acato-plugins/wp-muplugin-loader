@@ -41,7 +41,7 @@
         "class": "LkWdwrd\\MuPluginLoader\\Composer\\MuLoaderPlugin"
     },
     "require": {
-        "php": "^7.3 || ^8.0",
+        "php": "^7.2 || ^8.0",
         "composer-plugin-api": "^1.0 || ^2.0"
     },
     "require-dev": {
