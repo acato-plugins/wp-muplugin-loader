@@ -1,5 +1,5 @@
 {
-    "name": "boxuk/wp-muplugin-loader",
+    "name": "acato-plugins/wp-muplugin-loader",
     "description": "A drop-in MU Plugin loader for WordPress",
     "keywords": [
         "wordpress",
@@ -11,6 +11,10 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "authors": [
+        {
+            "name": "Richard Korthuis",
+            "email": "richardkorthuis@acato.nl"
+        },
         {
             "name": "Box UK",
             "email": "developers@boxuk.com"
